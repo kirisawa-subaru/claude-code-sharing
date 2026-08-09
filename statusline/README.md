@@ -2,7 +2,8 @@
 
 A curated, opinionated status line for Claude Code — pre-designed for readability so you don't end up with a wall of unformatted text.
 
-![status line screenshot](./screenshot.png)
+<img width="612" height="151" alt="image" src="https://github.com/user-attachments/assets/fd9cc417-56e8-4c57-b7d1-2527d4b8e914" />
+
 
 ```
 context: 28.8k  |  5h: 0%  |  7d: 28%  |  Opus 4.6 (1M context)
