@@ -15,21 +15,25 @@ The official command generates a status line with no layout constraints — font
 
 This one gives you pre-designed presets with curated typography, and lets you customize through selection rather than free-form prompting.
 
-## Install & Run
+## Setup
 
-One command to install, one slash command to configure, zero cleanup needed:
+Paste this link to Claude Code and say **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
+
+```
+https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md
+```
+
+Claude will fetch the instructions and walk you through 4 interactive steps. Nothing is installed, nothing to clean up.
+
+### Alternative: install as a slash command
+
+If you prefer a reusable `/statusline-setup` command:
 
 ```bash
 mkdir -p ~/.claude/agents && curl -sL https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md -o ~/.claude/agents/statusline-setup.md
 ```
 
-Then in any Claude Code session:
-
-```
-/statusline-setup
-```
-
-The skill walks you through 4 selections with live previews, writes your config, then **deletes itself** — no leftover files. Re-run the install one-liner to reconfigure anytime.
+The skill self-deletes after writing your config. Re-run the command above to reconfigure.
 
 ## What's configurable
 
@@ -44,7 +48,7 @@ Every option comes with a visual preview. Colors get a live ANSI preview in your
 
 ## Manual install
 
-If you prefer not to use the skill, copy the config from [`settings-snippet.json`](./settings-snippet.json) directly into `~/.claude/settings.json`.
+If you prefer not to use the interactive setup, copy the config from [`settings-snippet.json`](./settings-snippet.json) directly into `~/.claude/settings.json`.
 
 ## Requirements
 
