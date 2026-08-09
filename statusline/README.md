@@ -27,23 +27,15 @@ https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statu
 
 Then let Claude walk you through the interactive setup.
 
-<details>
-<summary>为什么不用官方的 /statusline？/ Why not the built-in /statusline?</summary>
+---
 
-官方命令生成的 status line 没有排版约束——字重、间距、信息密度都不受控。出来的效果通常像是临时凑的。
-
-这个工具提供预设好的排版方案，通过选择而不是自由输入来定制。
+### Why not the built-in `/statusline`?
 
 The official command generates a status line with no layout constraints — font weight, spacing, information density are all uncontrolled. The result usually looks like an afterthought.
 
 This one gives you pre-designed presets with curated typography, and lets you customize through selection rather than free-form prompting.
 
-</details>
-
-<details>
-<summary>备选：安装为 slash command / Alternative: install as a slash command</summary>
-
-如果你想要一个可复用的 `/statusline-setup` 命令：
+### Alternative: install as a slash command
 
 If you prefer a reusable `/statusline-setup` command:
 
@@ -51,40 +43,23 @@ If you prefer a reusable `/statusline-setup` command:
 mkdir -p ~/.claude/agents && curl -sL https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md -o ~/.claude/agents/statusline-setup.md
 ```
 
-Skill 会在写入配置后自动删除。重新运行上述命令即可重新配置。
-
 The skill self-deletes after writing your config. Re-run the command above to reconfigure.
 
-</details>
+### What's configurable
 
-<details>
-<summary>可配置项 / What's configurable</summary>
-
-| 步骤 / Step | 选项 / Options |
+| Step | Options |
 |------|---------|
-| **布局 / Layout** | Minimal（去标签）、Standard（带标签）、Full（+时间戳+费用）、或自行设计 |
-| **颜色 / Colors** | Moonlight（蓝）、Mono（灰）、Clean（白）、或自定义并实时终端预览 |
-| **分隔符 / Separator** | 竖线 `\|`、点 `·`、紧凑、或任意字符 |
-| **精度 / Precision** | 整数（`29k`）或一位小数（`28.8k`） |
-
-每个选项都有视觉预览。颜色会在终端中显示实时 ANSI 预览。
+| **Layout** | Minimal (labels stripped), Standard (labeled), Full (+ timestamps + cost), or design your own |
+| **Colors** | Moonlight (blue), Mono (gray), Clean (white), or create your own with live terminal preview |
+| **Separator** | Pipe `\|`, dot `·`, slim, or any character you like |
+| **Precision** | Whole numbers (`29k`) or one decimal (`28.8k`) |
 
 Every option comes with a visual preview. Colors get a live ANSI preview in your terminal.
 
-</details>
-
-<details>
-<summary>手动安装 / Manual install</summary>
-
-如果你不想用交互式设置，直接把 [`settings-snippet.json`](./settings-snippet.json) 的配置复制到 `~/.claude/settings.json`。
+### Manual install
 
 If you prefer not to use the interactive setup, copy the config from [`settings-snippet.json`](./settings-snippet.json) directly into `~/.claude/settings.json`.
 
-</details>
-
-<details>
-<summary>依赖 / Requirements</summary>
+### Requirements
 
 - `jq` (`brew install jq` / `apt install jq`)
-
-</details>
