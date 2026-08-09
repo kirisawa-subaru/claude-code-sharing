@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "jq -r 'def fmtpct: if . == null then \"--\" else ((.*10|round)/10|tostring) + \"%\" end; def fmtk: if . == null then \"--\" else (((./1000)*10|round)/10|tostring) + \"k\" end; \"\\u001b[90m\" as $g | \"\\u001b[38;5;153m\" as $b | \"\\u001b[0m\" as $x | (.context_window.total_input_tokens // null) as $ctx | (.rate_limits.five_hour.used_percentage // null) as $five | (.rate_limits.seven_day.used_percentage // null) as $week | $g + \"context: \" + $b + ($ctx|fmtk) + $g + \"  |  5h: \" + ($five|fmtpct) + \"  |  7d: \" + ($week|fmtpct) + \"  |  \" + (.model.display_name // \"--\") + $x'"
+  }
+}
