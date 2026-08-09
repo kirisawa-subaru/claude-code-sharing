@@ -1,40 +1,34 @@
 # Claude Code Status Line
 
-方便的设置claude code statusline / Easy setup for Claude Code status line
+方便的设置claude code statusline
 
-### 预览 / Preview:  
+### 预览:  
 <img width="612" height="151" alt="image" src="https://github.com/user-attachments/assets/fd9cc417-56e8-4c57-b7d1-2527d4b8e914" />
 
 ```
 context: 28.8k  |  5h: 0%  |  7d: 28%  |  Opus 4.6 (1M context)
 ```
 
-### 设置过程 / Setup process: 
+### 设置过程: 
 <img width="1175" height="308" alt="image" src="https://github.com/user-attachments/assets/c84d5531-9abd-4502-b9cf-ffe7c8e9a447" /><br>
 <img width="631" height="310" alt="image" src="https://github.com/user-attachments/assets/8143bdf8-4414-46e9-9dad-4f35d2673da9" />
 
-### 使用方式 / Usage
+### 使用方式
 
-打开**新的 Claude Code session** (Sonnet or Opus), 粘贴链接并告诉 Claude **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
-
-Open a **new Claude Code session** (Sonnet or Opus), paste this link and say **"Set up my status line using this link"**:
+打开**新的 Claude Code session** (Sonnet or Opus), 粘贴链接并告诉claude **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
 
 ```
 https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md
 ```
+然后交给claude, 通过交互式的操作进行设置就好. 
 
-然后交给 Claude, 通过交互式的操作进行设置就好.
-
-Then let Claude walk you through the interactive setup.
-
----
-
-### Why not the built-in `/statusline`?
+## Why not the built-in `/statusline`?
 
 The official command generates a status line with no layout constraints — font weight, spacing, information density are all uncontrolled. The result usually looks like an afterthought.
 
 This one gives you pre-designed presets with curated typography, and lets you customize through selection rather than free-form prompting.
 
+#
 ### Alternative: install as a slash command
 
 If you prefer a reusable `/statusline-setup` command:
@@ -45,7 +39,7 @@ mkdir -p ~/.claude/agents && curl -sL https://raw.githubusercontent.com/kirisawa
 
 The skill self-deletes after writing your config. Re-run the command above to reconfigure.
 
-### What's configurable
+## What's configurable
 
 | Step | Options |
 |------|---------|
@@ -56,10 +50,10 @@ The skill self-deletes after writing your config. Re-run the command above to re
 
 Every option comes with a visual preview. Colors get a live ANSI preview in your terminal.
 
-### Manual install
+## Manual install
 
 If you prefer not to use the interactive setup, copy the config from [`settings-snippet.json`](./settings-snippet.json) directly into `~/.claude/settings.json`.
 
-### Requirements
+## Requirements
 
 - `jq` (`brew install jq` / `apt install jq`)
