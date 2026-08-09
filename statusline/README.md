@@ -1,6 +1,6 @@
 # Claude Code Status Line
 
-通过交互式的方式, 方便的设置claude code statusline的格式
+方便的设置claude code statusline
 
 ### 预览:  
 <img width="612" height="151" alt="image" src="https://github.com/user-attachments/assets/fd9cc417-56e8-4c57-b7d1-2527d4b8e914" />
@@ -13,22 +13,22 @@ context: 28.8k  |  5h: 0%  |  7d: 28%  |  Opus 4.6 (1M context)
 <img width="1175" height="308" alt="image" src="https://github.com/user-attachments/assets/c84d5531-9abd-4502-b9cf-ffe7c8e9a447" /><br>
 <img width="631" height="310" alt="image" src="https://github.com/user-attachments/assets/8143bdf8-4414-46e9-9dad-4f35d2673da9" />
 
+### 使用方式
+
+打开**新的 Claude Code session** (Sonnet or Opus), 粘贴链接并告诉claude **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
+
+```
+https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md
+```
+然后交给claude, 通过交互式的操作进行设置就好. 
+
 ## Why not the built-in `/statusline`?
 
 The official command generates a status line with no layout constraints — font weight, spacing, information density are all uncontrolled. The result usually looks like an afterthought.
 
 This one gives you pre-designed presets with curated typography, and lets you customize through selection rather than free-form prompting.
 
-## Setup
-
-Open a **new Claude Code session** (Sonnet or Opus), paste this link and say **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
-
-```
-https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md
-```
-
-Claude will fetch the instructions and walk you through 4 interactive steps. Nothing is installed, nothing to clean up.
-
+#
 ### Alternative: install as a slash command
 
 If you prefer a reusable `/statusline-setup` command:
