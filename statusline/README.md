@@ -17,7 +17,7 @@ This one gives you pre-designed presets with curated typography, and lets you cu
 
 ## Setup
 
-Paste this link to Claude Code and say **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
+Open a **new Claude Code session** (Sonnet or Opus), paste this link and say **"请按照该链接设置 statusline"** or **"Set up my status line using this link"**:
 
 ```
 https://raw.githubusercontent.com/kirisawa-subaru/claude-code-sharing/main/statusline/skill/statusline-setup.md
