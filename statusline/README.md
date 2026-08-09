@@ -1,13 +1,17 @@
 # Claude Code Status Line
 
-A curated, opinionated status line for Claude Code — pre-designed for readability so you don't end up with a wall of unformatted text.
+通过交互式的方式, 方便的设置claude code statusline的格式
 
+### 预览:  
 <img width="612" height="151" alt="image" src="https://github.com/user-attachments/assets/fd9cc417-56e8-4c57-b7d1-2527d4b8e914" />
-
 
 ```
 context: 28.8k  |  5h: 0%  |  7d: 28%  |  Opus 4.6 (1M context)
 ```
+
+### 设置过程: 
+<img width="1175" height="308" alt="image" src="https://github.com/user-attachments/assets/c84d5531-9abd-4502-b9cf-ffe7c8e9a447" /><br>
+<img width="631" height="310" alt="image" src="https://github.com/user-attachments/assets/8143bdf8-4414-46e9-9dad-4f35d2673da9" />
 
 ## Why not the built-in `/statusline`?
 
