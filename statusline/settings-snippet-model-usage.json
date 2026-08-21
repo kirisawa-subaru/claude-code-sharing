@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "C=\"$HOME/.claude/usage-cache.json\"; P=\"$HOME/.claude/bin/usage-poll.py\"; [ -f \"$C\" ] && [ -z \"$(find \"$C\" -mmin +10 2>/dev/null)\" ] || ( { PY=$(command -v python3 || command -v python); [ -n \"$PY\" ] && [ -f \"$P\" ] && \"$PY\" \"$P\"; } >/dev/null 2>&1 </dev/null & ); F=\"\"; [ -f \"$C\" ] && F=$(jq -r --arg m \"Fable\" 'if (.models[$m].pct // null) == null then \"\" elif ((now - (.fetched_at // 0)) > 21600) then \"--%\" else ((.models[$m].pct*10|round)/10|tostring) + \"%\" end' \"$C\" 2>/dev/null); jq -r --arg fb \"$F\" 'def fmtpct: if . == null then \"--\" else ((.*10|round)/10|tostring) + \"%\" end; def fmtk: if . == null then \"--\" else (((./1000)*10|round)/10|tostring) + \"k\" end; \"\\u001b[90m\" as $g | \"\\u001b[38;5;153m\" as $b | \"\\u001b[38;5;110m\" as $c | \"\\u001b[0m\" as $x | (.context_window.total_input_tokens // null) as $ctx | (.rate_limits.five_hour.used_percentage // null) as $five | (.rate_limits.seven_day.used_percentage // null) as $week | $g + \"context: \" + $b + ($ctx|fmtk) + $g + \"  |  5h: \" + ($five|fmtpct) + \"  |  7d: \" + ($week|fmtpct) + (if $fb == \"\" then \"\" else \" / \" + $c + $fb + $g end) + \"  |  \" + (.model.display_name // \"--\") + $x'"
+  }
+}
